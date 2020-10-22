@@ -27,6 +27,10 @@ import pwd
 import grp
 import threading
 
+if os.geteuid() is not 0:
+    print "ERROR: Run systemctl as root!"
+    sys.exit(1)
+
 if sys.version[0] == '3':
     basestring = str
     xrange = range
