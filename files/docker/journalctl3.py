@@ -10,7 +10,7 @@ args = parser.parse_args()
 
 log_path = '/var/log/journal/{}.service.log'.format(args.u)
 if args.f:
-    os.system('tail -n 10 -F {}'.format(args.n, log_path))
+    os.system('tail -n 10 -F {}'.format(log_path))
 elif args.n:
     os.system('tail -n {} {}'.format(args.n, log_path))
 else:

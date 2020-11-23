@@ -27,7 +27,7 @@ import pwd
 import grp
 import threading
 
-if os.geteuid() is not 0:
+if os.geteuid() != 0:
     print("ERROR: Run systemctl as root!")
     sys.exit(1)
     
